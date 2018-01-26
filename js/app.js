@@ -30,12 +30,14 @@ $(document).ready(function() {
           codeTextCipher += space;
         }
       }
+      // cambiamos el contenido por el mensaje cifrado
+      messages.text('La palabra "' + inputText.val() + '" cifrada es: ' + codeTextCipher);
     } else {
       // si el mensaje ingresado es vacio entonces aparecera una alerta pidiendo un mensaje diferente de vacio
       alert('Ingresa un mensaje');
+      // cambiamos el contenido por el mensaje cifrado
+      messages.text(' ');
     }
-    // cambiamos el contenido por el mensaje cifrado
-    messages.text(codeTextCipher);
   });
   btnDecipher.on('click', () => {
     // debugger;
@@ -57,9 +59,10 @@ $(document).ready(function() {
           codeTextCipher += space;
         }
       }
+      messages.text('La palabra "' + inputText.val() + '" decifrada es: ' + codeTextCipher);
     } else {
       alert('Ingresa un mensaje');
+      messages.text(' ');
     }
-    messages.text(codeTextCipher);
   });
 });
